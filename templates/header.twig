@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    {# SEO META TAGS START HERE #}
+    {% for entry in craft.entries.section('about').find() %}
+    <title>Raphy Marcy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="{{ entry.bio | striptags }}">
+    <link rel="canonical" href="{{ siteUrl }}">
+
+    {#Facebook#}
+    <meta property="og:title" content="Raphy Marcy">
+    <meta property="og:description" content="{{ entry.bio }}">
+    <meta property="og:url" content="{{ siteUrl }}">
+
+    <meta property="og:site_name" content="Raphy Marci">
+    {% if craft.request.getRequestUri() == "/" or craft.request.getRequestUri() == "" %}
+        <meta propperty="og:type" content="website">
+    {% else %}
+        <meta propperty="og:type" content="article">
+    {% endif %}
+
+    {#Twitter#}
+    <meta name="twitter:title" content="Raphy Marcy">
+    {% endfor %}
+    {# SEO META TAGS END HERE #}
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.css" rel="stylesheet">
+
+ 
+  </head>
